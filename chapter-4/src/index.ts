@@ -227,6 +227,8 @@ const reserve: Reserve = (
 // from a caller's point of view, function's type is the union of those overload signature
 // form a implementer's point of view, function needs to be single, combined type
 
+// ts resolves overloads in the order they were declared.
+
 // ??? the implementation should be subtype to all overloaded interface ???
 
 
@@ -510,3 +512,11 @@ let myEvent3: MyEvent2 = {
 // fill in values later.
 // in other words, lead with types -- filling in the implementations later.
 
+// type-level code vs value-level code
+
+// type-level code, types and type operators
+// will be discarded before runtime
+// is not valid js code
+// some part of ts is inter-mingled with js
+// class generate both a type and a value
+// namespaces exist just at the value level
